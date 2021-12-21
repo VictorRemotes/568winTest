@@ -9,6 +9,11 @@
 </h1>
 <br/>
 <%--<a href="hello-servlet">Hello Servlet</a>--%>
-<button type="button"><span id="button">我是按鈕</span></button>
+<script>
+    function method1(){
+        alert("Test Button");
+    }
+</script>
+<button type="button" value="Button" onclick="method1()">Button</button>
 </body>
 </html>
