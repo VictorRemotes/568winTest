@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet.base;
+
 
 import java.net.MalformedURLException;
 import java.net.URL;
