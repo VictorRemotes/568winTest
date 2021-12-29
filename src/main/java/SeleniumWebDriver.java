@@ -11,17 +11,17 @@ public class SeleniumWebDriver {
     @Test
     public void testGoogle(){
         WebDriver driver = new ChromeDriver();
-        driver.get("http://www.yahoo.com.tw");
+        driver.get("http://www.google.com.tw");
 
-        String ExpectedTitle = "Yahoo奇摩";
+        String ExpectedTitle = "Google";
 
         String ActualTitle = driver.getTitle();
 
-        System.out.println("預計顯示的Title： " + ExpectedTitle);
+        System.out.println("Expected Display Title： " + ExpectedTitle);
 
         Assert.assertEquals(ActualTitle, ExpectedTitle);
 
-        System.out.println("實際顯示的Title： " + ActualTitle);
+        System.out.println("Actual Display Title： " + ActualTitle);
 
     }
 }
