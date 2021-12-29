@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE Suite SYSTEM” http://testng.org/testng-1.0.dtd “>
-<suite name="測試報告">
+<!DOCTYPE Suite SYSTEM 'http://testng.org/testng-1.0.dtd' >
+<suite name="測試報告" allow-return-values="true">
     <test name="測試用">
         <classes>
             <class name="SeleniumWebDriver"/>
         </classes>
-    </test>
-</suite>
+    </test><!-- Test -->
+</suite><!-- Suite -->
