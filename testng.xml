@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="測試報告">
+    <test name="測試用">
+        <classes>
+            <class name="SeleniumWebDriver"/>
+        </classes>
+    </test>
+</suite>
