@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PositiveTests extends BaseTest {
-
 	@Test
 	public void logInTest() {
 		// open the page
