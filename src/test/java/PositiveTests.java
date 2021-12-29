@@ -1,10 +1,9 @@
-package com.herokuapp.theinternet.tests;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import com.herokuapp.theinternet.base.BaseTest;
 import org.testng.annotations.Test;
 
 public class PositiveTests extends BaseTest {
