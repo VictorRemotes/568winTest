@@ -1,8 +1,0 @@
-@echo off
-echo 按任意鍵開始			
-pause
-echo 執行中.....
-Java -cp bin;lib/* org.testng.TestNG testng.xml
-echo 按任意鍵結束
-pause
-exit
