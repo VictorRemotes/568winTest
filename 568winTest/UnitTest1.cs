@@ -50,15 +50,17 @@ namespace MSTest_Web_Test
         }
 
         [TestMethod]
-        public void TheGoogleTest()
+        public void test568winSignIn()
         {
             driver.Navigate().GoToUrl("http://demo.568win.com/");
             driver.FindElement(By.Id("username")).Click();
             driver.FindElement(By.Id("username")).Clear();
             driver.FindElement(By.Id("username")).SendKeys("testnick");
+            Console.WriteLine("----------------Enter account number finish-------------------");
             driver.FindElement(By.Id("password")).Click();
             driver.FindElement(By.Id("password")).Clear();
             driver.FindElement(By.Id("password")).SendKeys("1234asdf");
+            Console.WriteLine("----------------Enter password finish-------------------");
             driver.FindElement(By.Id("prevent-btn-sign-in")).Click();
             Console.WriteLine("----------------Sign in test finish-------------------");
 
