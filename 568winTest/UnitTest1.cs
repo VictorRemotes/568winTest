@@ -52,19 +52,48 @@ namespace MSTest_Web_Test
         [TestMethod]
         public void test568winSignIn()
         {
+            
             driver.Navigate().GoToUrl("http://demo.568win.com/");
             driver.FindElement(By.Id("username")).Click();
             driver.FindElement(By.Id("username")).Clear();
             driver.FindElement(By.Id("username")).SendKeys("testnick");
-            Console.WriteLine("----------------Enter account number finish-------------------");
+            driver.FindElement(By.Id("password")).Click();
+            driver.FindElement(By.Id("password")).Clear();
+            driver.FindElement(By.Id("password")).SendKeys("123456");
+            driver.FindElement(By.Id("prevent-btn-sign-in")).Click();
+            Console.WriteLine("----------Test for entering wrong password----------");
+            Thread.Sleep(5000);
+            driver.FindElement(By.Id("username")).Click();
+            driver.FindElement(By.Id("username")).Clear();
+            driver.FindElement(By.Id("username")).SendKeys("testnick");
             driver.FindElement(By.Id("password")).Click();
             driver.FindElement(By.Id("password")).Clear();
             driver.FindElement(By.Id("password")).SendKeys("1234asdf");
-            Console.WriteLine("----------------Enter password finish-------------------");
             driver.FindElement(By.Id("prevent-btn-sign-in")).Click();
-            Console.WriteLine("----------------Sign in test finish-------------------");
+            Console.WriteLine("----------Test entering correct password----------");
 
+            driver.FindElement(By.XPath("//img[contains(@src,'https://img-1-10.cdn568.net/storage/customize/WebId-2274/Blue_SBO_Desktop_3/2243yy_logo_5f869bfc8ba7f_desktop.png?v=202201232224')]")).Click();
+            Console.WriteLine("----------Test whether clicking on the title can return to the home page----------");
+
+            driver.FindElement(By.XPath("//a[@id='home']/div[2]/i")).Click();
+            Console.WriteLine("----------Test click on Sports field----------");
+
+            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Deposit & Withdrawal'])[1]/following::span[3]")).Click();
+            Console.WriteLine("----------Test click on Virtual Sports field----------");
+
+            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Sports'])[1]/following::span[1]")).Click();
+            Console.WriteLine("----------Test click on Live Casino field----------");
+
+            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Virtual Sports'])[1]/following::span[1]")).Click();
+            Console.WriteLine("----------Test click on Games field----------");
+
+            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Live Casino'])[1]/following::span[1]")).Click();
+            Console.WriteLine("----------Test click on CockFighting field----------");
+
+            driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Games'])[1]/following::span[1]")).Click();
+            Console.WriteLine("----------Test click on Sports field----------");
         }
+
         private bool IsElementPresent(By by)
         {
             try
